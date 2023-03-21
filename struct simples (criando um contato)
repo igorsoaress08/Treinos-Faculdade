@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+int dia, mes, ano;
+}Datanasc;
+
+typedef struct {
+
+Datanasc datanasc;
+char nome[100];
+int idade;
+char genero;
+
+}Contatos;
+
+
+
+int main(void) {
+  
+  Datanasc datanasc;
+  Contatos contatos;
+
+  printf("Digite seu nome: \n");
+  fgets(contatos.nome,100,stdin);
+
+  printf("Digite sua idade: \n");
+  scanf("%d", &contatos.idade);
+  scanf("%c");
+
+  printf("Digite m para masculino, f para feminino, ou o para outros: \n");
+  scanf("%c", &contatos.genero);
+
+  printf("Digite sua data de nascimento no formato dd mm aaaa: \n");
+  scanf("%d%d%d",&contatos.datanasc.dia,&contatos.datanasc.mes,&contatos.datanasc.ano);
+
+
+  printf("******** Dados lidos*******\n\n");
+  printf("Nome:%s\nIdade:%d\nGênero:%c\n", contatos.nome,contatos.idade,contatos.genero);
+  printf("Data de nascimento: %d/%d/%d", contatos.datanasc.dia,contatos.datanasc.mes,contatos.datanasc.ano);
+
+  
+  return 0;
+}
