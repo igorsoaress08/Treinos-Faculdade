@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Data {
+int dia;
+int mes;
+int ano;
+} Data;
+
+void imprimirdata(Data *pont){
+
+  printf("%d/%d/%d kkk", pont->dia,pont->mes,pont->ano);
+}
+
+int main(){
+  Data data;
+  Data *p;
+
+  p = &data;
+
+  data.dia=22;
+  data.mes=11;
+  data.ano=1998;
+
+  printf("%d/%d/%d\n", data.dia,data.mes,data.ano);
+  imprimirdata(p);
+  
+  return 0;
+}
